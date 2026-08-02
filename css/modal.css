@@ -1,3 +1,7 @@
+input {
+  background-color: ##fcfcfc;
+}
+
 .modal-overlay {
   background-color: rgba(46, 47, 66, 0.4);
 
@@ -11,23 +15,30 @@
   align-items: center;
   justify-content: center;
 
+  visibility: hidden;
   opacity: 0;
   pointer-events: none;
-  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    opacity 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-overlay.is-open {
+  visibility: visible;
   opacity: 1;
   pointer-events: auto;
 }
 
 .modal {
+  max-width: 408px;
+  max-height: 582px;
+}
+
+.modal-form {
   background-color: #fcfcfc;
   display: flex;
   flex-direction: column;
   padding: 24px;
-  max-width: 408px;
-  max-height: 582px;
   border-radius: 4px;
   box-shadow:
     0 2px 1px 0 rgba(46, 47, 66, 0.08),
@@ -51,9 +62,10 @@
   margin-bottom: 24px;
   cursor: pointer;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition:
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-close:hover,
@@ -115,33 +127,37 @@
   border-color: #4d5ae5;
 }
 
-.contacts-input:focus-within {
+.contacts-input:focus {
   border-color: #4d5ae5;
 }
 
-.contacts-input:focus-within + .contacts-icon {
+.contacts-input:focus + .contacts-icon {
   color: #4d5ae5;
 }
 
 .contacts-textarea {
   resize: none;
-  width: 360px;
+  width: 100%;
   padding: 8px 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
   margin-bottom: 16px;
 
-  color: rgba(46, 47, 66, 0.4);
+  color: #434455;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.04em;
   font-weight: 400;
 
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.contacts-textarea.filled {
-  color: #434455;
+.contacts-textarea::placeholder {
+  color: rgba(46, 47, 66, 0.4);
+}
+
+.contacts-textarea:focus {
+  border-color: #4d5ae5;
 }
 
 .policy {
@@ -178,7 +194,7 @@
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.policy-checkbox.is-active {
+.policy-icon.is-active {
   opacity: 1;
 }
 
@@ -210,6 +226,7 @@
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.modal-submit.is-active {
+.modal-submit:hover,
+.modal-submit:focus {
   background-color: #404bbf;
 }
