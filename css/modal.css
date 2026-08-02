@@ -104,8 +104,6 @@ input {
 
 .contacts-icon {
   position: absolute;
-  width: 18px;
-  height: 24px;
   bottom: 8px;
   left: 16px;
   padding: 3px;
@@ -131,11 +129,11 @@ input {
 
 .contacts-input.is-active {
   border-color: #4d5ae5;
-  outline: hidden;
 }
 
 .contacts-input:focus {
   border-color: #4d5ae5;
+  outline: hidden;
 }
 
 .contacts-input:focus + .contacts-icon {
@@ -156,6 +154,7 @@ input {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.04em;
   font-weight: 400;
+  line-height: 1.17;
 
   transition:
     border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
@@ -176,6 +175,7 @@ input {
   flex-direction: row;
   max-width: 360px;
   position: relative;
+  gap: 8px;
 }
 
 .policy-input {
@@ -183,6 +183,20 @@ input {
   height: 14px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   border-radius: 4px;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.policy-checkbox {
+  position: absolute;
+  left: 0;
+  margin: 0;
+  width: 14px;
+  height: 14px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+
+  transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .policy-label {
@@ -193,20 +207,21 @@ input {
 .policy-icon {
   background-color: #404bbf;
   color: #f4f4fd;
-  border-radius: 4px;
+  border-radius: 2px;
   padding: 4px 3px;
   width: 16px;
   height: 16px;
 
+  opacity: 0;
+
   position: absolute;
   top: 0;
   left: 0;
-  opacity: 0;
 
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-input[type="checkbox"]:checked .policy-icon {
+.policy-input:checked + .policy-label .policy-icon {
   opacity: 1;
 }
 
