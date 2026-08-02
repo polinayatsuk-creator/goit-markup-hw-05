@@ -1,0 +1,101 @@
+.meta {
+  background-color: #2e2f42;
+}
+
+.meta-logo {
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.3;
+  color: #f4f4fd;
+  letter-spacing: 0.03em;
+
+  display: block;
+}
+
+.meta-accent {
+  color: #4d5ae5;
+}
+
+.meta-logo:hover,
+.meta-logo:focus {
+  color: #404bbf;
+}
+
+.meta-text {
+  color: #f4f4fd;
+
+  display: block;
+  padding-top: 16px;
+}
+
+.meta {
+  display: flex;
+  padding-top: 100px;
+  padding-bottom: 100px;
+}
+
+.meta .container {
+  display: flex;
+  flex-direction: row;
+}
+
+.meta-context {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  max-width: 264px;
+}
+
+.meta-media {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto 32px 120px;
+}
+
+.meta-media .meta-text {
+  color: #f4f4fd;
+
+  display: block;
+  padding: 0;
+}
+
+.meta-social-links {
+  display: flex;
+  padding: 0;
+  margin-top: 16px;
+  gap: 16px;
+  list-style: none;
+}
+
+.meta-social-links .link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  color: #f4f4fd;
+  border-radius: 50%;
+}
+
+.link {
+  background-color: #4d5ae5;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.meta-media > .meta-text {
+  color: #ffffff;
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  letter-spacing: 0.02em;
+  font-weight: 500;
+}
+
+.link:hover,
+.link:focus {
+  background-color: #31d0aa;
+}

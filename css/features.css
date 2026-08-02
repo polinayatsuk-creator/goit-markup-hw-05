@@ -1,0 +1,33 @@
+.zeta-list {
+  display: flex;
+  padding: 0;
+  gap: 24px;
+}
+
+.zeta-item {
+  width: 264px;
+}
+
+.zeta-title {
+  color: #2e2f42;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-top: 8px;
+}
+
+.zeta-text {
+  margin-top: 8px;
+}
+
+.zeta-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f4f4fd;
+  width: 264px;
+  height: 112px;
+  border: 1px solid #8e8f99;
+  border-radius: 4px;
+  color: #2e2f42;
+}
